@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Structured Data Examples</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<h1>Structured Data Examples</h1>
+		<h2>Yankee Stadium Address</h1>
+		<address>
+			Yankee Stadium<br/>
+			1 E 161 St.<br/>
+			The Bronx, NY. 10451
+		</address>
+
+		<h2>Sports Event Schema (<a href="https://schema.org/SportsEvent">Schema doc</a>)</h2>
+
+		<h3>Before:</h3>
+		<div>
+			<h4>Yankees Opening Day</h4>
+			<p>April 1st, 2021 at 1:05pm EDT</p>
+			<p>Blue Jays vs. Yankees</p>
+			<p>Game held in The Bronx, NY</p>
+		</div>
+
+		<h3>After:</h3>
+		<div itemscope itemtype="https://schema.org/SportsEvent">
+			<h4 itemprop="name">Yankees Opening Day</h4>
+			<p itemprop="startDate" content="2021-04-01T13:05">April 1st, 2021 at 1:05pm</p>
+			<p><span itemprop="awayTeam">Blue Jays</span> vs. <span itemprop="homeTeam">Yankees</span></p>
+			<p itemprop="location">Yankee Stadium, The Bronx, NY</p>
+		</div>
+
+		<link rel="stylesheet" href="style.css">
+	</body>
+</html>

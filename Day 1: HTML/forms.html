@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<form name="ithemes-foundations">
+			<fieldset name="dates">
+				<legend>Date Fields</legend>
+				<div>
+					<label for="standard-date">Date:</label>
+					<input type="date" name="standard-date" />
+				</div>
+				<div>
+					<label for="min-max-date">Date with Min and Max:</label>
+					<input type="date" name="min-max-date" min="1923-01-01" max="2000-12-31" />
+				</div>
+				<div>
+					<label for="local-date">Local Date:</label>
+					<input type="datetime-local" name="local-date" />
+				</div>
+				<div>
+					<label for="std-time">Time:</label>
+					<input type="time" name="std-time" />
+				</div>
+				<div>
+					<label for="std-month">Month:</label>
+					<input type="month" name="std-month" />
+				</div>
+				<div>
+					<label for="std-week">Week:</label>
+					<input type="week" name="std-week" />
+				</div>
+			</fieldset>
+
+			<div>
+				<label for="std-color">Pick a Color:</label>
+				<input type="color" name="std-color" />
+			</div>
+
+			<fieldset>
+				<legend>Measurments</legend>
+				<div>
+					<label for="donate">Donate:</label>
+					<input type="range" name="rating" min="0" max="1000000"onChange="document.getElementById('donations').value = this.value;"/>
+				</div>
+				<div>
+					Total:
+					<meter id="donations" name="donations" min="0" max="1000000"></meter>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Validation</legend>
+				<div>
+					<label>Phone (format: xxx-xxx-xxxx)</label>
+					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+				</div>
+				<div>
+					<label> Twitter Handle (format @username)</label>
+					<input type="text" id="twitter" name="twitter-handle" pattern="^@{1}[\w]{1,15}$" />
+				</div>
+			</fieldset>
+			<input type="submit" name="submit" label="Submit" />
+		</form>
+
+		<link rel="stylesheet" href="style.css">
+	</body>
+</html>
