@@ -17,7 +17,7 @@
 				</div>
 				<div>
 					<label for="min-max-date">Date with Min and Max:</label>
-					<input type="date" name="min-max-date" min="1923-01-01" max="2000-12-31" />
+					<input type="date" name="min-max-date" min="1923-01-01" max="2009-12-31" />
 				</div>
 				<div>
 					<label for="local-date">Local Date:</label>
@@ -46,10 +46,10 @@
 				<legend>Measurments</legend>
 				<div>
 					<label for="donate">Donate:</label>
-					<input type="range" name="rating" min="0" max="1000000"onChange="document.getElementById('donations').value = this.value;"/>
+					<input type="range" name="rating" min="0" max="1000000"onChange="document.getElementById('donations').value = this.value; document.getElementById('amount').innerHTML = this.value;"/>
 				</div>
 				<div>
-					Total:
+					Total: <span id="amount">0</span>
 					<meter id="donations" name="donations" min="0" max="1000000"></meter>
 				</div>
 			</fieldset>
@@ -57,7 +57,7 @@
 			<fieldset>
 				<legend>Validation</legend>
 				<div>
-					<label>Phone (format: xxx-xxx-xxxx)</label>
+					<label>*Phone (format: xxx-xxx-xxxx)</label>
 					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
 				</div>
 				<div>
