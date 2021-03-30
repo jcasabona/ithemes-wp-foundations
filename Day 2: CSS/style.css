@@ -1,0 +1,94 @@
+/** All other CSS goes here **/ 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+body {
+	font-family: 'Lora', serif;
+	font-size: 10px;
+	background-color: coral;
+}
+
+h1 {
+	font-family: 'Dela Gothic One', cursive;
+	font-size: 3.5rem;
+}
+
+header {
+	grid-area: header;
+	text-align: center;
+	border-bottom: 3px coral solid;
+	padding: 15px;
+}
+
+article {
+	grid-area: content;
+
+}
+
+aside {
+	grid-area: sidebar;
+}
+
+footer {
+	grid-area: footer;
+	text-align: center;
+	border-top: 3px coral solid;
+	padding: 15px;
+}
+
+main {
+	display: grid;
+	margin: 0 auto;
+	padding: 25px;
+	background: white;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"header header header header"
+		"content content content sidebar"
+		"footer footer footer footer";
+	grid-gap: 25px;
+	width: 70%;
+}
+
+blockquote {
+	font-size: 2.75rem;
+	line-height: 3.5rem;
+}
+
+main p, 
+ul li {
+	font-size: 1.5rem;
+	word-spacing: 0.25em;
+	line-height: 1.5em;
+	text-shadow: 5px 5px 6px rgba(35, 32, 55, 0.25);
+}
+
+img {
+	max-width: 50%;
+	float: right;
+	margin-left: 20px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body {
+		background: #000000;
+		color: #FFFFFF;
+	}
+
+	main {
+		background: #333333;
+		color: #F5F5F5;
+	}
+
+	a:link,
+	a:visited {
+		color: lightpink;
+	}
+
+	a:hover {
+		color: lightseagreen;
+	}
+}
+
+body {
+	color: rbga(#880000, 0.5) !important;
+}
+
